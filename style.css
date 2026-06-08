@@ -1,0 +1,839 @@
+@font-face {
+    font-family: "lato";
+    src: url("assets/fonts/AtlantisText-Bold.ttf");
+}
+
+@font-face {
+    font-family: "edit";
+    src: url("assets/fonts/editundo.ttf");
+}
+
+* {
+    user-select: none;
+    overscroll-behavior: none;
+    overflow: hidden;
+    image-rendering: pixelated;
+    pointer-events: none;
+    -webkit-user-drag: none;
+}
+
+body {
+    font-family: "lato";
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 4px rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+.backgroundImage {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-size: 18px;
+    background-image: url("assets/images/bg_image.png");
+    background-attachment: fixed;
+    background-repeat: repeat;
+    transform: scale(2.0);
+    top: 0px;
+}
+
+.backgroundImage.downStart {
+    animation: verticalDownStart 0.65s cubic-bezier(1.0, 0.0, 1.0, 0.0);
+}
+
+.backgroundImage.downEnd {
+    animation: verticalDownEnd 0.65s cubic-bezier(0.0, 1.0, 0.0, 1.0);
+}
+
+.backgroundImage.upStart {
+    animation: verticalDownEnd 0.65s cubic-bezier(0.0, 1.0, 0.0, 1.0) reverse;
+}
+
+
+.backgroundImage.upEnd {
+    animation: verticalDownStart 0.65s cubic-bezier(1.0, 0.0, 1.0, 0.0) reverse;
+}
+
+.leftSide {
+    position: absolute;
+    height: 100vh;
+    width: 88px;
+    background-image: url("assets/images/leftSide.png");
+    background-size: 88px 12px;
+    background-repeat: repeat;
+    top: 0px;
+    left: 0px;
+}
+
+.rightSide {
+    position: absolute;
+    height: 100vh;
+    width: 88px;
+    background-image: url("assets/images/rightSide.png");
+    background-size: 88px 12px;
+    background-repeat: repeat;
+    top: 0px;
+    right: 0px;
+}
+
+.mainMenu {
+    pointer-events: all;
+    transition: opacity 0.3s ease-out;
+}
+
+.mainMenu.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: inherit;
+}
+
+.menuGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    grid-template-rows: 224px 224px 128px;
+    row-gap: 16px;
+    column-gap: 16px;
+    pointer-events: inherit;
+}
+
+.gridItem {
+    position: relative;
+    pointer-events: inherit;
+}
+
+.largePanel {
+    height: 100%;
+    width: 100%;
+    filter: brightness(50%);
+    background-position: center;
+    background-size: cover;
+    background-image: url("assets/images/main_panel.png");
+    pointer-events: inherit;
+    transition: filter 0.3s ease-out;
+}
+
+.largePanel:hover {
+    filter: brightness(100%);
+}
+
+.largePanel img {
+    width: 100%;
+}
+
+.smallPanel {
+    height: 100%;
+    width: 100%;
+    filter: brightness(50%);
+    background-position: center;
+    background-size: cover;
+    background-image: url("assets/images/small_panel.png");
+    pointer-events: inherit;
+    transition: filter 0.3s ease-out;
+}
+
+.smallPanel:hover {
+    filter: brightness(100%);
+}
+
+.smallPanel img {
+    width: 100%;
+}
+
+.gridLargeText {
+    position: absolute;
+    text-align: center;
+    font-size: 84px;
+    left: 56px;
+    bottom: 0px;
+}
+
+.gridText {
+    position: absolute;
+    text-align: center;
+    font-size: 64px;
+    left: 50%;
+    bottom: 4px;
+    transform: translateX(-50%);
+}
+
+.aboutMeButton {
+    grid-column: span 3;
+}
+
+.textBox {
+    height: 128px;
+    width: 1112px;
+    background-image: url("assets/images/text_panel.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    bottom: 49px;
+}
+
+.textBoxIcon {
+    position: relative;
+    height: 96px;
+    width: 96px;
+    flex-shrink: 0;
+    transform: translateX(52px);
+}
+
+.textBoxIcon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("assets/images/icon_idle.gif");
+    background-size: cover;
+    opacity: 1;
+}
+
+.textBoxIcon::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("assets/images/icon_speak.gif");
+    background-size: cover;
+    opacity: 0;
+}
+
+.textBoxIcon.speak::before {
+    opacity: 0;
+}
+
+.textBoxIcon.speak::after {
+    opacity: 1;
+}
+
+.hiddenTextBox {
+    position: fixed;
+    opacity: 0;
+}
+
+.textBoxText {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 48px;
+    font-size: 36px;
+    text-shadow: 0px 2px rgb(0, 0, 0);
+}
+
+.aboutMe {
+    width: 100%;
+    position: fixed;
+    opacity: 0;
+    top: 0px;
+    transition: opacity 0.3s ease-out;
+}
+
+.aboutMe.appear {
+    opacity: 1;
+}
+
+.flexBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 128px;
+}
+
+.aboutMeText {
+    position: relative;
+    height: 384px;
+    width: 512px;
+    background-image: url("assets/images/aboutMePanel.png");
+    background-size: cover;
+    font-size: 32px;
+    text-shadow: 0px 2px rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutMePhoto {
+    height: 384px;
+    width: 384px;
+    object-fit: cover;
+}
+
+.pictureFrame {
+    position: fixed;
+    height: 480px;
+    width: 480px;
+    object-fit: cover;
+}
+
+.projects {
+    width: 100%;
+    position: fixed;
+    opacity: 0;
+    top: 0px;
+    transition: opacity 0.3s ease-out;
+}
+
+.projects.appear {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.projectsGrid {
+    position: absolute;
+    top: 48px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 164px 80px 164px;
+    pointer-events: inherit;
+    font-size: 48px
+}
+
+.projectsPanel {
+    width: 656px;
+    height: 80px;
+    background-image: url("assets/images/projectsPanel.png");
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.posterFlexBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    pointer-events: inherit;
+}
+
+.poster {
+    height: 128px;
+    width: 96px;
+    pointer-events: inherit;
+}
+
+.windowContainer {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity, 0.3s ease-in-out;
+}
+
+.windowContainer.appear {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.window {
+    position: fixed;
+    height: 452px;
+    width: 1152px;
+    background-image: url("assets/images/window.png");
+    background-size: cover;
+    opacity: 1.0;
+    pointer-events: inherit;
+    transform: scale(0.0, 0.0);
+    transition: transform 0.4s ease-in-out;
+}
+
+.window.appear {
+    transform: scale(1.0, 1.0);
+}
+
+.X {
+    position: absolute;
+    width: 100%;
+    height: 68px;
+    width: 68px;
+    right: 0px;
+    pointer-events: inherit;
+}
+
+.windowData {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(30px);
+}
+
+.windowVID {
+    position: absolute;
+    margin-left: 16px;
+    pointer-events: inherit;
+}
+
+.windowVID source {
+    pointer-events: inherit;
+}
+
+.windowText {
+    position: absolute;
+    width: 45%;
+    font-family: "edit";
+    right: 16px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: black;
+    text-shadow: 0px 0px rgb(0, 0, 0);
+}
+
+.MT {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.MT.appear {
+    opacity: 1;
+}
+
+.BB {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.BB.appear {
+    opacity: 1;
+}
+
+.ONAC {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.ONAC.appear {
+    opacity: 1;
+}
+
+.HYF {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.HYF.appear {
+    opacity: 1;
+}
+
+.RR {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.RR.appear {
+    opacity: 1;
+}
+
+.PUGIL {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.PUGIL.appear {
+    opacity: 1;
+}
+
+.DUNGY {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.DUNGY.appear {
+    opacity: 1;
+}
+
+.TEA {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.TEA.appear {
+    opacity: 1;
+}
+
+.HB {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.HB.appear {
+    opacity: 1;
+}
+
+.AI {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.AI.appear {
+    opacity: 1;
+}
+
+.DB {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.DB.appear {
+    opacity: 1;
+}
+
+.background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    pointer-events: inherit;
+}
+
+.skills {
+    width: 100%;
+    position: fixed;
+    opacity: 0;
+    top: 0px;
+    transition: opacity 0.3s ease-out;
+}
+
+.skills.appear {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.skillsContainer {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    pointer-events: inherit;
+    gap: 64px;
+}
+
+.tapeOffset1 {
+    --offset: 32px;
+}
+
+.tapeOffset2 {
+    --offset: 0px;
+}
+
+.tapePNG {
+    position: relative;
+    height: 512px;
+    width: 128px;
+    top: -512px;
+    transition: top 0.1s ease-in-out;
+}
+
+.tapePNG.down {
+    pointer-events: inherit;
+    top: calc(-128px + var(--offset));
+    animation: tapeDown 0.5s;
+    transition: top 0.1s ease-in-out;
+}
+
+.tapePNG.down:hover {
+    top: calc(-64px + var(--offset));
+}
+
+.tapeGrid {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    transform: translateY(172px);
+    row-gap: 16px;
+    pointer-events: inherit;
+}
+
+.tapeTitle {
+    position: relative;
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(45, 34, 54), rgb(0, 0, 0));
+    border-top: 4px solid rgb(65, 45, 73);
+    border-bottom: 4px solid rgb(65, 45, 73);
+    text-align: center;
+    font-size: 48px;
+}
+
+.tapeBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: inherit;
+}
+
+.tapeInfo {
+    text-align: center;
+    font-size: 32px;
+    margin-left: 10vw;
+}
+
+.tapeExit {
+    height: 96px;
+    width: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 48px;
+    margin-right: 20vw;
+    pointer-events: inherit;
+}
+
+.tapeExit img {
+    position: fixed;
+    height: 96px;
+    width: 256px;
+    size: cover;
+    pointer-events: inherit;
+    filter: brightness(50%);
+    transition: filter 0.3s ease-out;
+}
+
+.tapeExit img:hover {
+    filter: brightness(100%);
+}
+
+.tapeExit div {
+    z-index: 1;
+}
+
+.godot {
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+.godot.appear {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.python {
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+.python.appear {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.HTMLCSS {
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+.HTMLCSS.appear {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.aseprite {
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+.aseprite.appear {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.contacts {
+    width: 100%;
+    position: fixed;
+    opacity: 0;
+    top: 0px;
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+}
+
+.contacts.appear {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.contactsGrid {
+    display: grid;
+    grid-template-columns: 696px;
+    grid-template-rows: 140px 96px 32px;
+    pointer-events: inherit;
+}
+
+.contactsText {
+    height: 140px;
+    width: 100%;
+    background-image: url("assets/images/contactsPanel.png");
+    background-size: cover;
+    font-size: 64px;
+    text-align: center;
+}
+
+.contactsflexBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: inherit;
+    gap: 16px;
+}
+
+.contactsLink {
+    pointer-events: inherit;
+    transform: translateY(19px);
+}
+
+.contactsIcon {
+    height: 64px;
+    width: 64px;
+    pointer-events: inherit;
+}
+
+.contactsShelf {
+    height: 32px;
+    width: 512px;
+    top: 0px;
+    justify-self: center;
+}
+
+.rope {
+    height: 512px;
+    width: 32px;
+    position: fixed;
+    top: -512px;
+    left: 96px;
+    padding-left: 32px;
+    padding-right: 32px;
+    transition: top 0.1s ease-in-out;
+}
+
+.rope.down {
+    top: -128px;
+    pointer-events: all;
+    animation: dropRopeDown 0.5s;
+    transition: top 0.1s ease-in-out;
+}
+
+.rope.down:hover {
+    top: -96px;
+}
+
+.tapeCanvas {
+    opacity: 0.0;
+    transition: opacity 0.5s linear;
+    z-index: 1;
+}
+
+.tapeCanvas.appear {
+    pointer-events: all;
+    opacity: 1.0;
+}
+
+.particleCanvas {
+    background: rgba(85, 99, 136, 0.6);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    transform: scale(1.1);
+    filter: blur(16px) contrast(1);
+    opacity: 0.0;
+    z-index: 1;
+    transition: opacity 0.3s linear;
+}
+
+.particleCanvas.appear {
+    opacity: 1;
+}
+
+.fixPos {
+    position: fixed;
+}
+
+.absPos {
+    position: absolute;
+}
+
+.upperLayer {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+@keyframes verticalDownStart {
+    from {
+        background-position: 0px 0px;
+        filter: blur(0px);
+    }
+    to {
+        background-position: 0px -360px;
+        filter: blur(4px);
+    }
+}
+
+@keyframes verticalDownEnd {
+    from {
+        background-position: 0px 0px;
+        filter: blur(4px);
+    }
+    to {
+        background-position: 0px -720px;
+        filter: blur(0px);
+    }
+}
+
+@keyframes dropRopeDown {
+    from {
+        pointer-events: none;
+        top: -512px;
+    }
+    to {
+        pointer-events: none;
+        top: -128px;
+    }
+}
+
+@keyframes tapeDown {
+    from {
+        pointer-events: none;
+        top: -512px;
+    }
+    to {
+        pointer-events: none;
+        top: calc(-128px + var(--offset));
+    }
+}
