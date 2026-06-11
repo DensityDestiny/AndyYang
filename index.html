@@ -7,394 +7,418 @@
             Andy Yang's Website
         </title>
     </head>
-    <body>
-        <div class="backgroundImage"></div>
-        <div class="leftSide"></div>
-        <div class="rightSide"></div>
+    <body class="globalContainer">
+        <div class="globalViewport">
+            <div class="backgroundImage"></div>
+            <div class="leftSide"></div>
+            <div class="rightSide"></div>
+            
+            <div class="mainMenu">
+                <div class="container">
+                    <div class="menuGrid">
+                        <div class="aboutMeButton gridItem">
+                            <div class="largePanel absPos">
+                                <img src="assets/images/aboutMePanelArt.gif">
+                            </div>
+                            <div class="gridLargeText">
+                                About Me
+                            </div>
+                        </div>
+                        <div class="projectsButton gridItem">
+                            <div class="smallPanel absPos">
+                                <img src="assets/images/projectsPanelArt.gif">
+                            </div>
+                            <div class="gridText">
+                                Projects
+                            </div>
+                        </div>
+                        <div class="skillsButton gridItem">
+                            <div class="smallPanel absPos">
+                                <img src="assets/images/skillsPanelArt.gif">
+                            </div>
+                            <div class="gridText">
+                                Skills
+                            </div>
+                        </div>
+                        <div class="contactsButton gridItem">
+                            <div class="smallPanel absPos">
+                                <img src="assets/images/contactsPanelArt.gif">
+                            </div>
+                            <div class="gridText">
+                                Contacts
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textBox fixPos">
+                        <div class="textBoxIcon"> 
+                        </div>
+                        <div class="hiddenTextBox">Hi I'm Andy! Click on any of the boxes to learn more about me!</div>
+                        <div class="textBoxText type"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aboutMe">
+                <div class="container">
+                    <div class="flexBox">
+                        <div class="aboutMeText">
+                            HI! I am a upcoming Sophomore at Stony Brook University who is majoring in Computer Science.
+                            I enjoy coding (of course!), drawing, and listening to music.
+                        </div>
+                        <div class="photo">
+                            <img src="assets/images/Me.png" class="aboutMePhoto">
+                            <img src="assets/images/pictureFrame.png" class="pictureFrame">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects">
+                <div class="container">
+                    <div class="projectsGrid">
+                        <div class="flexBox">
+                            <div class="projectsPanel">Video Game Projects</div>
+                        </div>
+                        <div class="posterFlexBox">
+                            <div class="posterContainer">
+                                <img src="assets/images/MTP.png" class="poster" id="MT">
+                            </div>
+                            <div class="posterContainer">
+                                <img src="assets/images/BBP.png" class="poster" id="BB">
+                            </div>
+                            <div class="posterContainer">
+                                <img src="assets/images/ONACP.png" class="poster" id="ONAC">
+                            </div>
+                            <div class="posterContainer">
+                                <img src="assets/images/HYFP.png" class="poster" id="HYF">
+                            </div>
+                            <div class="posterContainer">
+                                <img src="assets/images/RRP.png" class="poster" id="RR">
+                            </div>
+                            <div class="posterContainer">
+                                <img src="assets/images/PUGILP.png" class="poster" id="PUGIL">
+                            </div>
+                            <div class="posterContainer">
+                                <img src="assets/images/DUNGYP.png" class="poster" id="DUNGY">
+                            </div>
+                        </div>
+                        <div class="flexBox">
+                            <div class="projectsPanel">Programming Projects</div>
+                        </div>
+                        <div class="posterFlexBox">
+                            <div class="posterContainer">
+                                <img src="assets/images/TEAP.png" class="poster" id="TEA">
+                            </div>
+                            <div class="posterContainer">
+                                <img src="assets/images/HBP.png" class="poster" id="HB">
+                            </div>
+                            <div class="posterContainer">
+                                <img src="assets/images/DBP.png" class="poster" id="DB">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textBox fixPos">
+                        <div class="textBoxIcon"> 
+                        </div>
+                        <div class="hiddenTextBox">Click on any of the projects to learn more about it!</div>
+                        <div class="textBoxText type"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills">
+                <div class="container">
+                    <div class="skillsContainer">
+                        <img src="assets/images/godotTape.png" class="tapePNG tapeOffset1" id="godot">
+                        <img src="assets/images/pythonTape.png" class="tapePNG tapeOffset2" id="python">
+                        <img src="assets/images/HTMLCSSTape.png" class="tapePNG tapeOffset1" id="HTMLCSS">
+                        <img src="assets/images/asepriteTape.png" class="tapePNG tapeOffset2" id="aseprite">
+                    </div>
+                    <div class="textBox fixPos">
+                        <div class="textBoxIcon"> 
+                        </div>
+                        <div class="hiddenTextBox">Click on the tapes to learn about my skills!</div>
+                        <div class="textBoxText type"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts">
+                <div class="container">
+                    <div class="contactsGrid">
+                        <div class="contactsflexBox contactsText">
+                            Contacts/Links
+                        </div>
+                        <div class="contactsflexBox">
+                            <a href="https://github.com/DensityDestiny" target="_blank" class="contactsLink">
+                                <img src="assets/images/github.png" class="contactsIcon">
+                            </a>
+                            <a href="https://www.linkedin.com/in/andy-tao-yang" target="_blank" class="contactsLink">
+                                <img src="assets/images/linkedIn.png" class="contactsIcon">
+                            </a>
+                            <a href="mailto:andyy0817@gmail.com" target="_blank" class="contactsLink">
+                                <img src="assets/images/gmail.png" class="contactsIcon">
+                            </a>
+                            <a href="https://densitydestiny.itch.io/" target="_blank" class="contactsLink">
+                                <img src="assets/images/itch.png" class="contactsIcon">
+                            </a>
+                        </div>
+                        <img src="assets/images/shelf.png" class="contactsShelf">
+                    </div>
+                </div>
+            </div>
+
+            <img src="assets/images/rope.png" class="rope">
+
+            <div class="tapeContainer">
+                <canvas class="particleCanvas"></canvas>
+                <canvas class="tapeCanvas"></canvas>
+                <div class="upperLayer godot">
+                    <div class="container">
+                        <div class="tapeGrid">
+                            <div class="tapeTitle">Godot</div>
+                            <div class="tapeBox">
+                                <div class="tapeInfo">
+                                    Godot is a game Engine that I started using in <br>
+                                    March 2024. It has taught me alot in terms of <br>
+                                    problem solving, as well as various topics such <br>
+                                    as procedural animation and shaders.
+                                </div>
+                                <div class="tapeExit">
+                                    <img src="assets/images/tapePanel.png">
+                                    <div>
+                                        Back
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="upperLayer python">
+                    <div class="container">
+                        <div class="tapeGrid">
+                            <div class="tapeTitle">Python</div>
+                            <div class="tapeBox">
+                                <div class="tapeInfo">
+                                    Python is the first programming language <br>
+                                    I learned in 2022 and the one I'm most <br>
+                                    experienced in. I have recently started<br>
+                                    learning other languages like Java too!
+                                </div>
+                                <div class="tapeExit">
+                                    <img src="assets/images/tapePanel.png">
+                                    <div>
+                                        Back
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="upperLayer HTMLCSS">
+                    <div class="container">
+                        <div class="tapeGrid">
+                            <div class="tapeTitle">HTML / CSS</div>
+                            <div class="tapeBox">
+                                <div class="tapeInfo">
+                                    HTML and CSS are what I used to create this <br>
+                                    website! I first learned it in 2024 to create <br>
+                                    my first website. It's also been useful for <br>
+                                    creating profiles on Itch and Github!
+                                </div>
+                                <div class="tapeExit">
+                                    <img src="assets/images/tapePanel.png">
+                                    <div>
+                                        Back
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="upperLayer aseprite">
+                    <div class="container">
+                        <div class="tapeGrid">
+                            <div class="tapeTitle">Aseprite</div>
+                            <div class="tapeBox">
+                                <div class="tapeInfo">
+                                    I started drawing in 2023. Currently Aseprite <br>
+                                    is the main application I use for art. I'm also <br>
+                                    branching out from pixel art by learning <br>
+                                    Krita for digital art and Blender for 3D art!
+                                </div>
+                                <div class="tapeExit">
+                                    <img src="assets/images/tapePanel.png">
+                                    <div>
+                                        Back
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="windowContainer">
+                <div class="background"></div>
+                <div class="window">
+                    <img src="assets/images/X.png" class="X">
+                    <div class="windowData MT">
+                        <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
+                            <source src="assets/videos/MT.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="windowText">
+                            <div>
+                                <h2 style="margin: 0px; padding: 0px;">Mutant Tomato</h2>
+                                This is the first game I ever made and published on Itch.io. 
+                                It is a platformer with a grappling mechanic. It taught me alot
+                                about coding, as many physics principles such as springs, forces,
+                                and kinematics showed up <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="windowData BB">
+                        <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
+                            <source src="assets/videos/BB.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="windowText">
+                            <div>
+                                <h2 style="margin: 0px; padding: 0px;">Battery Box</h2>
+                                This is a block pushing puzzle game I made. Taught me about creating
+                                grid systems and how to design good levels. It also taught me about
+                                how I could use code to implement more complicated systems through raycasting <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="windowData ONAC">
+                        <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
+                            <source src="assets/videos/ONAC.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="windowText">
+                            <div>
+                                <h2 style="margin: 0px; padding: 0px;">One Night At Cays</h2>
+                                This was a fan game of FNAF that I made. This was the first
+                                project I used sound effects and music in. I learned to do mixing
+                                and also improved my drawing and animation skills. <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="windowData HYF">
+                        <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
+                            <source src="assets/videos/HYF.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="windowText">
+                            <div>
+                                <h2 style="margin: 0px; padding: 0px;">Hammy Yoyo Fall</h2>
+                                This was a foddian rage game I made. This was the first project
+                                I got burnt out on, and its probably my worst one.
+                                It ended up being a learning experience about overscoping for me <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="windowData RR">
+                        <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
+                            <source src="assets/videos/RR.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="windowText">
+                            <div>
+                                <h2 style="margin: 0px; padding: 0px;">Rocket Runner</h2>
+                                My first Game Jam project I ever made. This was made for a 2 day jam
+                                and it helped me with the issue of overscoping, as I had to keep
+                                my ideas reasonable. <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="windowData PUGIL">
+                        <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
+                            <source src="assets/videos/PUGIL.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="windowText">
+                            <div>
+                                <h2 style="margin: 0px; padding: 0px;">Pugil Frozen Over</h2>
+                                Game Jam that I ended up placing 1st in. It taught me more about
+                                level/UI design and playtesting as I tried to implement something new or
+                                interesting each level. <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="windowData DUNGY">
+                        <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
+                            <source src="assets/videos/DUNGY.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="windowText">
+                            <div>
+                                <h2 style="margin: 0px; padding: 0px;">Dungy</h2>
+                                This was a puzzle platformer game I made for a 3 day game Jam. It 
+                                taught me about implementing more complex movement systems
+                                as the player functioned on a grid based system when interacting with
+                                blocks. <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="windowData TEA">
+                        <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
+                            <source src="assets/videos/TEA.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="windowText">
+                            <div>
+                                <h2 style="margin: 0px; padding: 0px;">Mudea Tea Bot</h2>
+                                This was a bot I made to play a word game. The goal is to come
+                                up with a word containing the 3 letters before time ran out.
+                                The bot reads the information on screen and finds a word
+                                that works. Then it automatically types it. <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="windowData HB">
+                        <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
+                            <source src="assets/videos/HB.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="windowText">
+                            <div>
+                                <h2 style="margin: 0px; padding: 0px;">Human Benchmark</h2>
+                                This was a bot I made to beat some of the tests on the Human Benchmark
+                                It uses solutions like image detection, and reading the html contents of the page
+                                and then executes actions to beat the test. <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="windowData DB">
+                        <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
+                            <source src="assets/videos/DB.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="windowText">
+                            <div>
+                                <h2 style="margin: 0px; padding: 0px;">Discord Bot</h2>
+                                This uses the discord and Gemini API. When the bot reads a message
+                                from discord containing "bot:" it will send it to the Gemini AI
+                                and generate a response. <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <div class="mainMenu">
-            <div class="container">
-                <div class="menuGrid">
-                    <div class="aboutMeButton gridItem">
-                        <div class="largePanel absPos">
-                            <img src="assets/images/aboutMePanelArt.gif">
-                        </div>
-                        <div class="gridLargeText">
-                            About Me
-                        </div>
-                    </div>
-                    <div class="projectsButton gridItem">
-                        <div class="smallPanel absPos">
-                            <img src="assets/images/projectsPanelArt.gif">
-                        </div>
-                        <div class="gridText">
-                            Projects
-                        </div>
-                    </div>
-                    <div class="skillsButton gridItem">
-                        <div class="smallPanel absPos">
-                            <img src="assets/images/skillsPanelArt.gif">
-                        </div>
-                        <div class="gridText">
-                            Skills
-                        </div>
-                    </div>
-                    <div class="contactsButton gridItem">
-                        <div class="smallPanel absPos">
-                            <img src="assets/images/contactsPanelArt.gif">
-                        </div>
-                        <div class="gridText">
-                            Contacts
-                        </div>
-                    </div>
-                </div>
-                <div class="textBox fixPos">
-                    <div class="textBoxIcon"> 
-                    </div>
-                    <div class="hiddenTextBox">Hi Im Andy! Click on any of the boxes to learn more about me!</div>
-                    <div class="textBoxText type"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="aboutMe">
-            <div class="container">
-                <div class="flexBox">
-                    <div class="aboutMeText">
-                        HI! I am a upcoming Sophomore at Stony Brook University who is majoring in Computer Science.
-                        I enjoy coding (of course!), drawing, and listening to music.
-                    </div>
-                    <div class="photo">
-                        <img src="assets/images/Me.png" class="aboutMePhoto">
-                        <img src="assets/images/pictureFrame.png" class="pictureFrame">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="projects">
-            <div class="container">
-                <div class="projectsGrid">
-                    <div class="flexBox">
-                        <div class="projectsPanel">Video Game Projects</div>
-                    </div>
-                    <div class="posterFlexBox">
-                        <img src="assets/images/MTP.png" class="poster" id="MT">
-                        <img src="assets/images/BBP.png" class="poster" id="BB">
-                        <img src="assets/images/ONACP.png" class="poster" id="ONAC">
-                        <img src="assets/images/HYFP.png" class="poster" id="HYF">
-                        <img src="assets/images/RRP.png" class="poster" id="RR">
-                        <img src="assets/images/PUGILP.png" class="poster" id="PUGIL">
-                        <img src="assets/images/DUNGYP.png" class="poster" id="DUNGY">
-                    </div>
-                    <div class="flexBox">
-                        <div class="projectsPanel">Programming Projects</div>
-                    </div>
-                    <div class="posterFlexBox">
-                        <img src="assets/images/TEAP.png" class="poster" id="TEA">
-                        <img src="assets/images/HBP.png" class="poster" id="HB">
-                        <img src="assets/images/DBP.png" class="poster" id="DB">
-                    </div>
-                </div>
-                <div class="textBox fixPos">
-                    <div class="textBoxIcon"> 
-                    </div>
-                    <div class="hiddenTextBox">Click on any of the projects to learn more about it!</div>
-                    <div class="textBoxText type"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="skills">
-            <div class="container">
-                <div class="skillsContainer">
-                    <img src="assets/images/godotTape.png" class="tapePNG tapeOffset1" id="godot">
-                    <img src="assets/images/pythonTape.png" class="tapePNG tapeOffset2" id="python">
-                    <img src="assets/images/HTMLCSSTape.png" class="tapePNG tapeOffset1" id="HTMLCSS">
-                    <img src="assets/images/asepriteTape.png" class="tapePNG tapeOffset2" id="aseprite">
-                </div>
-                <div class="textBox fixPos">
-                    <div class="textBoxIcon"> 
-                    </div>
-                    <div class="hiddenTextBox">Click on the tapes to learn about my skills!</div>
-                    <div class="textBoxText type"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="contacts">
-            <div class="container">
-                <div class="contactsGrid">
-                    <div class="contactsflexBox contactsText">
-                        Contacts/Links
-                    </div>
-                    <div class="contactsflexBox">
-                        <a href="https://github.com/DensityDestiny" target="_blank" class="contactsLink">
-                            <img src="assets/images/github.png" class="contactsIcon">
-                        </a>
-                        <a href="https://www.linkedin.com/in/andy-tao-yang" target="_blank" class="contactsLink">
-                            <img src="assets/images/linkedIn.png" class="contactsIcon">
-                         </a>
-                        <a href="mailto:andyy0817@gmail.com" target="_blank" class="contactsLink">
-                            <img src="assets/images/gmail.png" class="contactsIcon">
-                        </a>
-                        <a href="https://densitydestiny.itch.io/" target="_blank" class="contactsLink">
-                            <img src="assets/images/itch.png" class="contactsIcon">
-                        </a>
-                    </div>
-                    <img src="assets/images/shelf.png" class="contactsShelf">
-                </div>
-            </div>
-        </div>
-
-        <img src="assets/images/rope.png" class="rope">
-
-        <div class="tapeContainer">
-            <canvas class="particleCanvas"></canvas>
-            <div class="upperLayer godot">
-                <div class="container">
-                    <div class="tapeGrid">
-                        <div class="tapeTitle">Godot</div>
-                        <div class="tapeBox">
-                            <div class="tapeInfo">
-                                Godot is a game Engine that I started using in <br>
-                                March 2024. It has taught me alot in terms of <br>
-                                problem solving, as well as various topics such <br>
-                                as procedural animation and shaders.
-                            </div>
-                            <div class="tapeExit">
-                                <img src="assets/images/tapePanel.png">
-                                <div>
-                                    Back
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="upperLayer python">
-                <div class="container">
-                    <div class="tapeGrid">
-                        <div class="tapeTitle">Python</div>
-                        <div class="tapeBox">
-                            <div class="tapeInfo">
-                                Python is the first programming language <br>
-                                I learned in 2022 and the one I'm most <br>
-                                experienced in. I have recently started<br>
-                                learning other languages like Java too!
-                            </div>
-                            <div class="tapeExit">
-                                <img src="assets/images/tapePanel.png">
-                                <div>
-                                    Back
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="upperLayer HTMLCSS">
-                <div class="container">
-                    <div class="tapeGrid">
-                        <div class="tapeTitle">HTML / CSS</div>
-                        <div class="tapeBox">
-                            <div class="tapeInfo">
-                                HTML and CSS are what I used to create this <br>
-                                website! I first learned it in 2024 to create <br>
-                                my first website. It's also been useful for <br>
-                                creating profiles on Itch and Github!
-                            </div>
-                            <div class="tapeExit">
-                                <img src="assets/images/tapePanel.png">
-                                <div>
-                                    Back
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="upperLayer aseprite">
-                <div class="container">
-                    <div class="tapeGrid">
-                        <div class="tapeTitle">Aseprite</div>
-                        <div class="tapeBox">
-                            <div class="tapeInfo">
-                                I started drawing in 2023. Currently Aseprite <br>
-                                is the main application I use for art. I'm also <br>
-                                branching out from pixel art by learning <br>
-                                Krita for digital art and Blender for 3D art!
-                            </div>
-                            <div class="tapeExit">
-                                <img src="assets/images/tapePanel.png">
-                                <div>
-                                    Back
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="windowContainer">
-            <div class="background"></div>
-            <div class="window">
-                <img src="assets/images/X.png" class="X">
-                <div class="windowData MT">
-                    <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
-                        <source src="assets/videos/MT.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="windowText">
-                        <div>
-                            <h2 style="margin: 0px; padding: 0px;">Mutant Tomato</h2>
-                            This is the first game I ever made and published on Itch.io. 
-                            It is a platformer with a grappling mechanic. It taught me alot
-                            about coding, as many physics principles such as springs, forces,
-                            and kinematics showed up <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="windowData BB">
-                    <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
-                        <source src="assets/videos/BB.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="windowText">
-                        <div>
-                            <h2 style="margin: 0px; padding: 0px;">Battery Box</h2>
-                            This is a block pushing puzzle game I made. Taught me about creating
-                            grid systems and how to design good levels. It also taught me about
-                            how I could use code to implement more complicated systems through raycasting <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="windowData ONAC">
-                    <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
-                        <source src="assets/videos/ONAC.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="windowText">
-                        <div>
-                            <h2 style="margin: 0px; padding: 0px;">One Night At Cays</h2>
-                            This was a fan game of FNAF that I made. This was the first
-                            project I used sound effects and music in. I learned to do mixing
-                            and also improved my drawing and animation skills. <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="windowData HYF">
-                    <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
-                        <source src="assets/videos/HYF.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="windowText">
-                        <div>
-                            <h2 style="margin: 0px; padding: 0px;">Hammy Yoyo Fall</h2>
-                            This was a foddian rage game I made. This was the first project
-                            I got burnt out on, and its probably my worst one.
-                            It ended up being a learning experience about overscoping for me <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="windowData RR">
-                    <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
-                        <source src="assets/videos/RR.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="windowText">
-                        <div>
-                            <h2 style="margin: 0px; padding: 0px;">Rocket Runner</h2>
-                            My first Game Jam project I ever made. This was made for a 2 day jam
-                            and it helped me with the issue of overscoping, as I had to keep
-                            my ideas reasonable. <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="windowData PUGIL">
-                    <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
-                        <source src="assets/videos/PUGIL.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="windowText">
-                        <div>
-                            <h2 style="margin: 0px; padding: 0px;">Pugil Frozen Over</h2>
-                            Game Jam that I ended up placing 1st in. It taught me more about
-                            level/UI design and playtesting as I tried to implement something new or
-                            interesting each level. <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="windowData DUNGY">
-                    <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
-                        <source src="assets/videos/DUNGY.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="windowText">
-                        <div>
-                            <h2 style="margin: 0px; padding: 0px;">Dungy</h2>
-                            This was a puzzle platformer game I made for a 3 day game Jam. It 
-                            taught me about implementing more complex movement systems
-                            as the player functioned on a grid based system when interacting with
-                            blocks. <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="windowData TEA">
-                    <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
-                        <source src="assets/videos/TEA.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="windowText">
-                        <div>
-                            <h2 style="margin: 0px; padding: 0px;">Mudea Tea Bot</h2>
-                            This was a bot I made to play a word game. The goal is to come
-                            up with a word containing the 3 letters before time ran out.
-                            The bot reads the information on screen and finds a word
-                            that works. Then it automatically types it. <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="windowData HB">
-                    <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
-                        <source src="assets/videos/HB.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="windowText">
-                        <div>
-                            <h2 style="margin: 0px; padding: 0px;">Human Benchmark</h2>
-                            This was a bot I made to beat some of the tests on the Human Benchmark
-                            It uses solutions like image detection, and reading the html contents of the page
-                            and then executes actions to beat the test. <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="windowData DB">
-                    <video width="576" height="360" autoplay loop muted playsinline class="windowVID">
-                        <source src="assets/videos/DB.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="windowText">
-                        <div>
-                            <h2 style="margin: 0px; padding: 0px;">Discord Bot</h2>
-                            This uses the discord and Gemini API. When the bot reads a message
-                            from discord containing "bot:" it will send it to the Gemini AI
-                            and generate a response. <br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <script type="importmap">
             {
-              "imports": {
+            "imports": {
                 "three": "https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.module.js",
                 "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.184.0/examples/jsm/"
-              }
+            }
             }
         </script>
+        
         <script type="module" src="main.js"></script>
     </body>
 </html>

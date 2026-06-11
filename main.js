@@ -2,21 +2,35 @@ import * as THREE from 'three';
 
 
 // Declarations for 2D and 3D:
-const h = window.innerHeight;
-const w = window.innerWidth;
+const h = 723;
+const w = 1470;
+
+
+// Window resizing
+function resize() {
+    const scaleX = window.innerWidth / 1470;
+    const scaleY = window.innerHeight / 723;
+    const scale = Math.min(scaleX, scaleY);
+    document.querySelector(".globalViewport").style.transform = `scale(${scale})`;
+}
+
+
+window.addEventListener("resize", resize);
+resize();
+
 
 // 3D Scene Setup
 let previousTime = Date.now() / 1000.0;
 const scale = 0.25;
-const renderer = new THREE.WebGLRenderer({ antialias: false, alpha: true });
+const renderer = new THREE.WebGLRenderer({canvas: document.querySelector(".tapeCanvas"), antialias: false, alpha: true});
 renderer.setSize(w * scale, h * scale);
 renderer.domElement.style.position = "fixed";
 renderer.domElement.style.top = "0";
 renderer.domElement.style.left = "0";
-renderer.domElement.style.width = "100vw";
-renderer.domElement.style.height = "100vh";
+renderer.domElement.style.width = "1470px";
+renderer.domElement.style.height = "723px";
 renderer.domElement.className = "tapeCanvas";
-document.body.appendChild(renderer.domElement);
+
 const r = 0.0025;
 const camera = new THREE.OrthographicCamera(-w * r, w * r, h * r, -h * r, 0.1, 1000);
 camera.position.z = 10;

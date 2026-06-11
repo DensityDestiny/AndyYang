@@ -17,11 +17,26 @@
     -webkit-user-drag: none;
 }
 
-body {
+.globalContainer {
+    width: 100vw;
+    height: 100vh;
     font-family: "lato";
     color: rgb(255, 255, 255);
     text-shadow: 0px 4px rgb(0, 0, 0);
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.globalViewport {
+    width: 1470px;
+    height: 723px;
+    transform-origin: center;
+    flex-shrink: 0;
 }
 
 .backgroundImage {
@@ -55,7 +70,7 @@ body {
 
 .leftSide {
     position: absolute;
-    height: 100vh;
+    height: 723px;
     width: 88px;
     background-image: url("assets/images/leftSide.png");
     background-size: 88px 12px;
@@ -66,7 +81,7 @@ body {
 
 .rightSide {
     position: absolute;
-    height: 100vh;
+    height: 723px;
     width: 88px;
     background-image: url("assets/images/rightSide.png");
     background-size: 88px 12px;
@@ -86,7 +101,7 @@ body {
 }
 
 .container {
-    height: 100vh;
+    height: 723px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -299,7 +314,7 @@ body {
 .projectsGrid {
     position: absolute;
     top: 48px;
-    width: 100vw;
+    width: 1470px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 80px 164px 80px 164px;
@@ -327,7 +342,31 @@ body {
     pointer-events: inherit;
 }
 
+.posterContainer {
+    position: relative;
+    height: 128px;
+    width: 96px;
+    pointer-events: inherit;
+}
+
+.posterContainer::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 128px;
+    width: 96px;
+    pointer-events: none;
+}
+
+.posterContainer:hover::after {
+    background-image: url("assets/images/posterOutline.gif");
+    background-size: cover;
+    z-index: 1;
+}
+
 .poster {
+    position: relative;
     height: 128px;
     width: 96px;
     pointer-events: inherit;
@@ -532,8 +571,8 @@ body {
 }
 
 .skillsContainer {
-    height: 100vh;
-    width: 100vw;
+    height: 723px;
+    width: 1470px;
     position: fixed;
     display: flex;
     justify-content: center;
@@ -569,7 +608,7 @@ body {
 }
 
 .tapeGrid {
-    width: 100vw;
+    width: 1470px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -599,7 +638,7 @@ body {
 .tapeInfo {
     text-align: center;
     font-size: 32px;
-    margin-left: 10vw;
+    margin-left: 147px;
 }
 
 .tapeExit {
@@ -610,7 +649,7 @@ body {
     align-items: center;
     text-align: center;
     font-size: 48px;
-    margin-right: 20vw;
+    margin-right: 294px;
     pointer-events: inherit;
 }
 
@@ -751,13 +790,17 @@ body {
 }
 
 .tapeCanvas {
+    position: fixed;
+    width: 1470px;
+    height: 723px;
+    top: 0px;
+    left: 0px;
     opacity: 0.0;
     transition: opacity 0.5s linear;
     z-index: 1;
 }
 
 .tapeCanvas.appear {
-    pointer-events: all;
     opacity: 1.0;
 }
 
